@@ -1,0 +1,35 @@
+# Useful for finding stuff, use -r for recursive search, -i ignore upper/lowercase differences
+grep <search> <path>
+
+# Tells useful file info
+file <file>
+
+# Prints the strings of printable characters in files.
+strings -t d <file>
+
+# Unzipping stuff
+gzip, zip, gunzip, unzip
+
+### Sleuthkit
+
+Disk is made of 4 layers: Media, Block, Inode, Filename
+
+# Media
+
+mmls
+
+# Block
+
+blk...
+
+# Inode
+
+icat -o <offset> <disk> <number>
+
+# Filename
+
+fls -o <offset> <disk> <cd>
+
+# Recover
+
+tsk_recover -e -o <offset> <image> <output>
